@@ -99,6 +99,6 @@ See complete documentation, architecture, usage examples, and customization guid
 
 **Built with ❤️ for security professionals**
 
-[![GitHub](https://img.shields.io/badge/GitHub-vikrant--project-black?style=for-the-badge&logo=github)](https://github.com/vikrantproject/bug-automate)
+[![GitHub](https://img.shields.io/badge/GitHub-vikrantproject-black?style=for-the-badge&logo=github)](https://github.com/vikrantproject/bug-automate)
 
 </div>
