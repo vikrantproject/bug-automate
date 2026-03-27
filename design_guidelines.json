@@ -1,0 +1,110 @@
+{
+  "theme": "dark_mode_priority",
+  "archetype": "Archetype 5 (Jewel & Luxury) combined with iOS 26 Liquid Glass",
+  "design_philosophy": "A sophisticated, Apple-inspired 'Liquid Glass' aesthetic that turns a traditionally aggressive cybersecurity scanner into a calm, premium, and highly analytical command center. Uses deep obsidian backgrounds, heavy backdrop blurs, and vibrant pastel data visualizations to create depth without clutter. Purely optical and emotional.",
+  "typography": {
+    "font_family_headings": "Outfit, sans-serif",
+    "font_family_body": "Manrope, sans-serif",
+    "font_family_mono": "JetBrains Mono, monospace",
+    "rules": [
+      "No generic sans (Inter/Roboto) for headings. Use 'Outfit' for that sleek, modern iOS feel.",
+      "Headings (H1/H2): Must use tracking-tight or tracking-tighter to look premium.",
+      "Overlines/Labels: Uppercase + tracking-[0.2em] + text-xs.",
+      "Data metrics (large numbers): Use Outfit with font-light or font-black to create tension, e.g., text-6xl font-light tracking-tighter.",
+      "Never center-align left-to-right reading content. Left-align data and forms for optical clarity."
+    ]
+  },
+  "colors": {
+    "background": {
+      "base": "#050507",
+      "mesh_gradient": "Radial gradients (pastel blue, cyan, mint) layered behind the background with extreme blur to simulate light bleeding into the dark room."
+    },
+    "surface": {
+      "glass_heavy": "bg-white/[0.03] backdrop-blur-3xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]",
+      "glass_light": "bg-white/[0.01] backdrop-blur-xl border border-white/5",
+      "solid_dark": "bg-[#0A0A0E] border border-white/10"
+    },
+    "text": {
+      "primary": "text-white/90",
+      "secondary": "text-white/50",
+      "muted": "text-white/30"
+    },
+    "brand_accents": {
+      "primary": "#38bdf8", 
+      "pastel_blue": "#60a5fa",
+      "pastel_cyan": "#22d3ee",
+      "pastel_mint": "#34d399",
+      "note": "Avoid pure teal (#1B93A4) entirely. Rely on Cyan and Mint for the requested aesthetic."
+    },
+    "status": {
+      "info": "text-blue-400 bg-blue-400/10 border border-blue-400/20",
+      "success": "text-emerald-400 bg-emerald-400/10 border border-emerald-400/20",
+      "warning": "text-amber-400 bg-amber-400/10 border border-amber-400/20",
+      "critical": "text-rose-400 bg-rose-400/10 border border-rose-400/20",
+      "running": "text-cyan-400 bg-cyan-400/10 border border-cyan-400/20",
+      "queued": "text-white/40 bg-white/5 border border-white/5"
+    }
+  },
+  "spacing_and_layout": {
+    "grid_system": "MODE B: The 'Control Room' Grid. Dense, calculated spacing. Base: grid-cols-1 md:grid-cols-4 lg:grid-cols-6.",
+    "gap_strategy": "gap-6 for main panels, gap-2 for dense internal widgets (like the tool grid).",
+    "panel_spacing": "All glass cards must have p-6 or p-8 internal padding to prevent content from touching the luminous borders.",
+    "border_radius": "Use rounded-3xl for main layout containers (iOS 26 aesthetic) and rounded-xl for inner elements.",
+    "optical_alignment": "Ensure icons inside buttons have right-padding of 4px instead of 6px to optically center the text."
+  },
+  "motion_and_interactions": {
+    "animations": "Framer Motion Spring animations. type: 'spring', stiffness: 300, damping: 30.",
+    "hover_states": "Cards must elevate slightly (-translate-y-1) and increase the border-white/10 to border-white/20 on hover. The inner backdrop-blur should feel deeper.",
+    "active_states": "Inputs and buttons must have a glowing focus ring (e.g., focus:ring-2 focus:ring-cyan-500/50).",
+    "progress_pulse": "Running tools should have an infinite soft pulse animation on their background or border."
+  },
+  "components": {
+    "scan_form": {
+      "style": "Crystal Glass panel. Input fields should be bg-black/40 with border-white/10, text-white. Focus state activates a cyan glow.",
+      "layout": "Vertical stack (flex-col) with wide spacing (gap-6).",
+      "tor_toggle": "iOS style pill toggle, turns mint green when active, subtle inner shadow."
+    },
+    "progress_bar": {
+      "style": "Liquid gradient bar. bg-gradient-to-r from-blue-500 via-cyan-400 to-mint-400.",
+      "effects": "Add a drop-shadow matching the gradient color (shadow-[0_0_15px_rgba(34,211,238,0.5)]) to make it look like a neon light tube.",
+      "typography": "Phase indicator in JetBrains Mono above the bar, tracking wider."
+    },
+    "tool_grid": {
+      "layout": "Grid of 150 items. grid-cols-5 md:grid-cols-10 lg:grid-cols-12 gap-2.",
+      "item_style": "Tiny bento cells. rounded-md p-2 text-xs font-mono border text-center transition-all duration-300.",
+      "status_colors": "Queued (gray/muted), Running (blue/cyan with pulse animation), Done (mint green), Failed (rose red)."
+    },
+    "findings_dashboard": {
+      "layout": "Bento box row with 4-5 columns for severities.",
+      "card_style": "Glass surface. Huge metrics (text-5xl font-light tracking-tighter).",
+      "badges": "Critical (Rose), High (Amber), Medium (Blue), Low (Mint), Info (White/50)."
+    },
+    "server_info_panel": {
+      "style": "Terminal-lite aesthetic embedded in a glass card. font-mono, text-sm, text-white/70. Dot indicator (green) for active status.",
+      "layout": "Top-right corner widget or sidebar block."
+    },
+    "results_view": {
+      "style": "Detailed, highly readable pane. Left side: list of findings. Right side: Evidence & Remediation.",
+      "typography": "High contrast for CVE links (pastel blue + hover:underline). Use pure HTML/Tailwind for structural layout, Shadcn for accordions/tabs."
+    }
+  },
+  "assets": {
+    "image_urls": {},
+    "notes": "No external images required. The aesthetic relies entirely on CSS backdrop-filters, mesh gradients, and typography."
+  },
+  "accessibility_and_testing": {
+    "contrast": "Ensure text over glass panels meets WCAG AA 4.5:1. Use text-white/90 for primary readable text, not white/50.",
+    "testing_attributes": "ALL interactive elements (buttons, toggles, form inputs, tool grid cells) MUST have a data-testid attribute formatted in kebab-case."
+  },
+  "instructions_to_main_agent": [
+    "Strictly use the defined 'glass_heavy' and 'glass_light' Tailwind classes for the card UI to achieve the iOS 26 Liquid Glass look.",
+    "Set a global background mesh using fixed absolutely positioned blurred divs: <div class='fixed inset-0 bg-black -z-50'></div><div class='fixed top-[-20%] left-[-10%] w-[50%] h-[50%] bg-blue-900/20 blur-[120px] rounded-full -z-40'></div><div class='fixed bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-cyan-900/20 blur-[120px] rounded-full -z-40'></div>",
+    "For the tool grid, since there are 150 items, heavily optimize rendering. Use raw div grids rather than heavy React components for each cell.",
+    "Implement the 'tor_toggle' using Shadcn Switch, but override the thumb to look more like the iOS design (pure white thumb, cyan active track).",
+    "Use Framer Motion to stagger the entrance of the dashboard cards.",
+    "Use Phosphor icons (e.g., Shield, Radar, Globe) to compliment the high-end UI.",
+    "Ensure the progress bar has a smooth width transition via inline styles and CSS transitions to reflect real-time WebSocket updates.",
+    "Remember to inject Google Fonts in index.html: <link href='https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Manrope:wght@400;500;600&family=JetBrains+Mono&display=swap' rel='stylesheet'>",
+    "For charts (if used for severity breakdown), use Recharts with a transparent background and custom Tooltip that mimics the glass styling."
+  ]
+}

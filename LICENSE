@@ -1,0 +1,48 @@
+MIT License
+
+Copyright (c) 2026 Bug Scanner Platform Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+LEGAL NOTICE:
+
+This tool is intended for AUTHORIZED SECURITY TESTING ONLY. Users must:
+
+1. Only scan systems they own or have explicit written permission to test
+2. Comply with all applicable laws and regulations including but not limited to:
+   - Computer Fraud and Abuse Act (CFAA) in the United States
+   - Computer Misuse Act 1990 in the United Kingdom  
+   - Directive 2013/40/EU in the European Union
+   - Equivalent laws in their jurisdiction
+
+3. Understand that unauthorized access to computer systems is illegal in most
+   countries and can result in criminal prosecution
+
+4. Accept full responsibility for their use of this software
+
+THE AUTHORS AND CONTRIBUTORS:
+- Do NOT authorize or encourage any illegal use of this software
+- Accept NO liability for misuse of this software
+- Are NOT responsible for any legal consequences arising from use of this software
+- Provide this software "AS IS" without warranty of any kind
+
+By using this software, you acknowledge that you have read this notice and 
+agree to use the software only for lawful, authorized security testing purposes.

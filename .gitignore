@@ -1,0 +1,12 @@
+node_modules/
+frontend/node_modules/
+frontend/dist/
+.env
+*.log
+logs/
+scan_results/*.db
+scan_results/*.db-*
+/tmp/
+.DS_Store
+*.swp
+*.swo

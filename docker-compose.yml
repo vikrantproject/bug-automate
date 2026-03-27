@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - '127.0.0.1:6379:6379'
+    volumes:
+      - redis-data:/data
+    restart: unless-stopped
+
+  tor:
+    image: dperson/torproxy
+    ports:
+      - '127.0.0.1:9050:9050'
+      - '127.0.0.1:9051:9051'
+    environment:
+      - TOR_CONTROL_PWD=${TOR_CONTROL_PASSWORD}
+    restart: unless-stopped
+
+  scanner:
+    build: .
+    ports:
+      - '${VPS_IP}:${PORT}:${PORT}'
+    depends_on:
+      - redis
+      - tor
+    env_file:
+      - .env
+    volumes:
+      - ./scan_results:/app/scan_results
+      - ./logs:/app/logs
+    restart: unless-stopped
+
+volumes:
+  redis-data:
