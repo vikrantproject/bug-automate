@@ -3,8 +3,8 @@
 > **The most comprehensive automated security testing platform with 150+ tools, Tor IP rotation, and real-time scanning**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Tools: 150+](https://img.shields.io/badge/Tools-150%2B-green)](https://github.com/vikrant-project/bug-automate)
-[![Platform: VPS](https://img.shields.io/badge/Platform-VPS-orange)](https://github.com/vikrant-project/bug-automate)
+[![Tools: 150+](https://img.shields.io/badge/Tools-150%2B-green)](https://github.com/vikrantproject/bug-automate)
+[![Platform: VPS](https://img.shields.io/badge/Platform-VPS-orange)](https://github.com/vikrantproject/bug-automate)
 
 ---
 
@@ -63,7 +63,7 @@ Traditional security testing requires:
 ### **Installation (5 minutes)**
 
 ```bash
-git clone https://github.com/vikrant-project/bug-automate.git
+git clone https://github.com/vikrantproject/bug-automate.git
 cd bug-automate
 chmod +x install.sh
 sudo ./install.sh
@@ -99,6 +99,6 @@ See complete documentation, architecture, usage examples, and customization guid
 
 **Built with ❤️ for security professionals**
 
-[![GitHub](https://img.shields.io/badge/GitHub-vikrant--project-black?style=for-the-badge&logo=github)](https://github.com/vikrant-project/bug-automate)
+[![GitHub](https://img.shields.io/badge/GitHub-vikrant--project-black?style=for-the-badge&logo=github)](https://github.com/vikrantproject/bug-automate)
 
 </div>
